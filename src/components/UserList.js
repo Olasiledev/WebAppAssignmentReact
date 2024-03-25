@@ -41,7 +41,7 @@ function UserList() {
     }, []);
 
     if (users.length === 0) {
-        return <div style={styles.userItem}>Loading user profile...</div>;
+        return <div style={styles.userItem}>Loading user profile......</div>;
     }
 
     return (

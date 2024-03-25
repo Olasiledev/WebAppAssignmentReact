@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import '../cssStyles/Calculator.css'; 
+import React, { useState } from "react";
+import "../cssStyles/Calculator.css";
 
 function Calculator() {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
 
-  const handleChange = (e) => {
+  const makeChange = (e) => {
     setInput(input + e.target.value);
   };
 
@@ -17,29 +17,66 @@ function Calculator() {
   };
 
   const clearInput = () => {
-    setInput('');
+    setInput("");
   };
 
   return (
     <div className="calculator-container">
-      <input className="calculator-display" type="text" value={input} readOnly />
+      <input
+        className="calculator-display"
+        type="text"
+        value={input}
+        readOnly
+      />
       <div className="calculator-keys">
-        <button className="calc-button" onClick={handleChange} value="1">1</button>
-        <button className="calc-button" onClick={handleChange} value="2">2</button>
-        <button className="calc-button" onClick={handleChange} value="3">3</button>
-        <button className="calc-button" onClick={handleChange} value="+">+</button>
-        <button className="calc-button" onClick={handleChange} value="4">4</button>
-        <button className="calc-button" onClick={handleChange} value="5">5</button>
-        <button className="calc-button" onClick={handleChange} value="6">6</button>
-        <button className="calc-button" onClick={handleChange} value="-">-</button>
-        <button className="calc-button" onClick={handleChange} value="7">7</button>
-        <button className="calc-button" onClick={handleChange} value="8">8</button>
-        <button className="calc-button" onClick={handleChange} value="9">9</button>
-        <button className="calc-button" onClick={handleChange} value="*">x</button>
-        <button className="calc-button" onClick={handleChange} value="0">0</button>
-        <button className="calc-button" onClick={clearInput}>C</button>
-        <button className="calc-button" onClick={calculate}>=</button>
-        <button className="calc-button" onClick={handleChange} value="/">÷</button>
+        <button className="calc-button" onClick={makeChange} value="1">
+          1
+        </button>
+        <button className="calc-button" onClick={makeChange} value="2">
+          2
+        </button>
+        <button className="calc-button" onClick={makeChange} value="3">
+          3
+        </button>
+        <button className="calc-button" onClick={makeChange} value="+">
+          +
+        </button>
+        <button className="calc-button" onClick={makeChange} value="4">
+          4
+        </button>
+        <button className="calc-button" onClick={makeChange} value="5">
+          5
+        </button>
+        <button className="calc-button" onClick={makeChange} value="6">
+          6
+        </button>
+        <button className="calc-button" onClick={makeChange} value="-">
+          -
+        </button>
+        <button className="calc-button" onClick={makeChange} value="7">
+          7
+        </button>
+        <button className="calc-button" onClick={makeChange} value="8">
+          8
+        </button>
+        <button className="calc-button" onClick={makeChange} value="9">
+          9
+        </button>
+        <button className="calc-button" onClick={makeChange} value="*">
+          x
+        </button>
+        <button className="calc-button" onClick={makeChange} value="0">
+          0
+        </button>
+        <button className="calc-button" onClick={clearInput}>
+          C
+        </button>
+        <button className="calc-button" onClick={calculate}>
+          =
+        </button>
+        <button className="calc-button" onClick={makeChange} value="/">
+          ÷
+        </button>
       </div>
     </div>
   );

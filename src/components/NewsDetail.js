@@ -13,12 +13,12 @@ function NewsDetail() {
       try {
         const response = await fetch(URL);
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          throw new Error(`HTTP error! status-> ${response.status}`);
         }
         const data = await response.json();
         setArticles(data.articles);
       } catch (error) {
-        console.error("Could not fetch news data:", error);
+        console.error("Could not fetch news data->", error);
         setError(error.message);
       } finally {
         setIsLoading(false);
@@ -28,7 +28,7 @@ function NewsDetail() {
     fetchNews();
   }, []);
 
-  if (isLoading) return <div className="container mt-5">Loading...</div>;
+  if (isLoading) return <div className="container mt-5">Loading.......</div>;
   if (error) return <div className="container mt-5">Error: {error}</div>;
 
   return (

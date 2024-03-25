@@ -16,7 +16,7 @@ function Calendar() {
       setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
     };
   
-    const generateCalendarDays = () => {
+    const generateDays = () => {
       const startDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
       const endDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
   
@@ -45,7 +45,7 @@ function Calendar() {
           {days.map(day => (
             <div key={day} className="calendar-day-name">{day}</div>
           ))}
-          {generateCalendarDays().map((date, index) => (
+          {generateDays().map((date, index) => (
             <div key={index} className={`calendar-day ${date.getMonth() !== currentDate.getMonth() ? "calendar-day--not-current" : ""}`}>
               {date.getDate()}
             </div>

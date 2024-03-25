@@ -27,7 +27,7 @@ function FinancialDataWidget() {
     const [stockData, setStockData] = useState(null);
 
     useEffect(() => {
-        const fetchStockData = async () => {
+        const fetchStock = async () => {
             const symbol = "AAPL";
             const apiKey = "bsXSeBnccajVCa8hGq5lprbGEtpbPC68";
             const url = `https://financialmodelingprep.com/api/v3/quote/${symbol}?apikey=${apiKey}`;
@@ -37,11 +37,11 @@ function FinancialDataWidget() {
                 const data = await response.json();
                 setStockData(data[0]);
             } catch (error) {
-                console.error("Failed to fetch stock data", error);
+                console.error("Failed to fetch stock", error);
             }
         };
 
-        fetchStockData();
+        fetchStock();
     }, []);
 
     if (!stockData) return <div style={styles.paragraph}>Loading data...</div>;

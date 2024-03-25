@@ -45,7 +45,7 @@ function NewsFeedWidget() {
         fetchNews();
     }, []);
 
-    if (articles.length === 0) return <div style={styles.article}>Loading news...</div>;
+    if (articles.length === 0) return <div style={styles.article}>Loading news.......</div>;
 
     return (
         <div style={styles.widgetContainer}>
