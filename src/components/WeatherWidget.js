@@ -9,6 +9,7 @@ const styles = {
         maxWidth: '400px',
         margin: '20px auto',
         boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+        transition: 'transform 0.2s ease-in-out',
     },
     header: {
         color: '#0056b3',
@@ -47,7 +48,7 @@ function WeatherWidget() {
     if (!weather) return <div style={styles.paragraph}>Loading weather...</div>;
 
     return (
-        <div style={styles.widgetContainer}>
+        <div style={{ ...styles.widgetContainer, ':hover': { transform: 'translateY(-5px)' } }}>
             <h2 style={styles.header}>Weather in {weather?.name}</h2>
             <p style={styles.paragraph}>Temperature: {(weather?.main.temp - 273.15).toFixed(2)}°C</p>
             <p style={styles.paragraph}>Condition: {weather?.weather[0].description}</p>

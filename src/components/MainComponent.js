@@ -7,19 +7,27 @@ const MainComponent = ({ children }) => {
     const toggleIconStyle = {
         zIndex: 1040,
         position: 'fixed',
-        top: '10px',
-        left: isSidebarOpen ? 'calc(250px)' : '10px',
+        top: '20px',
+        left: isSidebarOpen ? 'calc(250px + 20px)' : '20px',
         fontSize: '30px',
         cursor: 'pointer',
-        color: '#ffffff',
+        color: '#333', 
         transition: 'all 0.3s ease-in-out',
+    };
+
+    const mainContentStyle = {
+        transition: 'margin-left 0.3s',
+        marginLeft: isSidebarOpen ? '250px' : '0',
+        backgroundColor: isSidebarOpen ? '#f4f4f4' : '#fff', 
+        minHeight: '100vh',
+        padding: '20px',
     };
 
     return (
         <div className="d-flex">
             <span onClick={() => setIsSidebarOpen(!isSidebarOpen)} style={toggleIconStyle}>&#9776;</span>
             <Sidebar isOpen={isSidebarOpen} />
-            <div className="flex-grow-1" style={{ transition: 'margin-left 0.3s', marginLeft: isSidebarOpen ? '250px' : '0' }}>
+            <div className="flex-grow-1" style={mainContentStyle}>
                 {children}
             </div>
         </div>

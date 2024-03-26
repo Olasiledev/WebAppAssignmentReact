@@ -2,25 +2,30 @@ import React, { useEffect, useState } from 'react';
 
 const styles = {
     widgetContainer: {
-        background: '#f8f8f8',
         border: '1px solid #ddd',
         borderRadius: '8px',
         padding: '20px',
         maxWidth: '400px',
         margin: '20px auto',
         boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+        transition: 'transform 0.2s ease-in-out',
     },
-    header: {
+    widgetContainerHover: {
+        transform: 'translateY(-5px)',
+    },
+    widgetHeader: {
         color: '#0056b3',
         borderBottom: '2px solid #eee',
         paddingBottom: '10px',
         marginBottom: '20px',
+        textAlign: 'center',
+        fontSize: '24px',
     },
-    paragraph: {
+    widgetParagraph: {
         color: '#333',
         marginBottom: '10px',
         lineHeight: '1.6',
-    }
+    },
 };
 
 function FinancialDataWidget() {
@@ -44,19 +49,19 @@ function FinancialDataWidget() {
         fetchStock();
     }, []);
 
-    if (!stockData) return <div style={styles.paragraph}>Loading data...</div>;
+    if (!stockData) return <div style={styles.widgetParagraph}>Loading data...</div>;
 
     return (
-        <div style={styles.widgetContainer}>
-            <h2 style={styles.header}>Stock Data</h2>
-            <p style={styles.paragraph}>Symbol: {stockData.symbol}</p>
-            <p style={styles.paragraph}>Price: ${stockData.price}</p>
-            <p style={styles.paragraph}>Change: {stockData.change}</p>
-            <p style={styles.paragraph}>Change Percent: {stockData.changePercent}%</p>
-            <p style={styles.paragraph}>High Today: ${stockData.high}</p>
-            <p style={styles.paragraph}>Low Today: ${stockData.low}</p>
-            <p style={styles.paragraph}>Year High: ${stockData.yearHigh}</p>
-            <p style={styles.paragraph}>Year Low: ${stockData.yearLow}</p>
+        <div style={{ ...styles.widgetContainer, ...(stockData ? styles.widgetContainerHover : {}) }}>
+            <h2 style={styles.widgetHeader}>Stock Data</h2>
+            <p style={styles.widgetParagraph}>Symbol: {stockData.symbol}</p>
+            <p style={styles.widgetParagraph}>Price: ${stockData.price}</p>
+            <p style={styles.widgetParagraph}>Change: {stockData.change}</p>
+            <p style={styles.widgetParagraph}>Change Percent: {stockData.changePercent}%</p>
+            <p style={styles.widgetParagraph}>High Today: ${stockData.high}</p>
+            <p style={styles.widgetParagraph}>Low Today: ${stockData.low}</p>
+            <p style={styles.widgetParagraph}>Year High: ${stockData.yearHigh}</p>
+            <p style={styles.widgetParagraph}>Year Low: ${stockData.yearLow}</p>
         </div>
     );
 }

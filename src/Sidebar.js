@@ -8,7 +8,7 @@ const Sidebar = ({ isOpen }) => {
         left: isOpen ? '0' : '-250px',
         width: '250px',
         height: '100vh',
-        backgroundColor: '#343a40',
+        backgroundColor: '#293241', 
         transition: 'left 0.3s ease-in-out',
         zIndex: 1050,
         padding: '20px 10px',
@@ -19,39 +19,66 @@ const Sidebar = ({ isOpen }) => {
             <style>
                 {`
                     .sidebar-link {
+                        display: block;
+                        padding: 12px 20px;
                         color: #ffffff;
                         text-decoration: none;
-                        display: block;
-                        padding: 10px 15px;
-                        border-radius: 4px;
-                        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+                        transition: all 0.3s ease-in-out;
                     }
 
-                    .sidebar-link:hover, .sidebar-link:focus {
-                        background-color: #50596c;
+                    .sidebar-link:hover {
+                        background-color: #1e2a38; // Changed hover background color
                         color: #ffffff;
-                        text-decoration: none;
                     }
 
                     .active-sidebar-link {
-                        background-color: #66707b;
-                        color: #dcdcdc;
+                        background-color: #1e2a38; // Changed active link background color
+                        color: #ffffff;
+                    }
+
+                    .sidebar-link-icon {
+                        margin-right: 10px;
+                    }
+
+                    .sidebar-list {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    .sidebar-header {
+                        font-size: 20px;
+                        color: #ffffff;
+                        margin-bottom: 20px;
                     }
                 `}
             </style>
             <div style={sidebarStyles}>
-                <ul className="list-unstyled">
+                <div className="sidebar-header">Navigation</div>
+                <ul className="sidebar-list">
                     <li>
-                        <NavLink to="/dashboard" className="sidebar-link" activeClassName="active-sidebar-link">Dashboard</NavLink>
+                        <NavLink to="/dashboard" className="sidebar-link" activeClassName="active-sidebar-link">
+                            <i className="fas fa-tachometer-alt sidebar-link-icon"></i>
+                            Dashboard
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/weather" className="sidebar-link" activeClassName="active-sidebar-link">Weather</NavLink>
+                        <NavLink to="/weather" className="sidebar-link" activeClassName="active-sidebar-link">
+                            <i className="fas fa-cloud sidebar-link-icon"></i>
+                            Weather
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/news" className="sidebar-link" activeClassName="active-sidebar-link">News</NavLink>
+                        <NavLink to="/news" className="sidebar-link" activeClassName="active-sidebar-link">
+                            <i className="fas fa-newspaper sidebar-link-icon"></i>
+                            News
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/financialDetails" className="sidebar-link" activeClassName="active-sidebar-link">Stocks</NavLink>
+                        <NavLink to="/financialDetails" className="sidebar-link" activeClassName="active-sidebar-link">
+                            <i className="fas fa-chart-line sidebar-link-icon"></i>
+                            Stocks
+                        </NavLink>
                     </li>
                 </ul>
             </div>
