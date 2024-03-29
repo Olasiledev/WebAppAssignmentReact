@@ -1,6 +1,6 @@
 // src/App.js
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
 import Dashboard from "./components/Dashboard";
@@ -15,6 +15,7 @@ function App() {
   return (
     <Router>
       <Routes>
+      <Route path="/" element={<Navigate replace to="/login" />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<MainComponent><Dashboard /></MainComponent>} />
