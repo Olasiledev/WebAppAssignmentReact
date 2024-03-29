@@ -31,6 +31,7 @@ function UserList() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
+        //FETCH USERS FUNCTION 
         const fetchUsers = async () => {
             const userCollectionRef = collection(db, "users");
             const data = await getDocs(userCollectionRef);

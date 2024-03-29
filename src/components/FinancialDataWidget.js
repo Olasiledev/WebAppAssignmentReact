@@ -32,6 +32,7 @@ function FinancialDataWidget() {
     const [stockData, setStockData] = useState(null);
 
     useEffect(() => {
+        //FETCH STOCK FUNCTION
         const fetchStock = async () => {
             const symbol = "AAPL";
             const apiKey = "bsXSeBnccajVCa8hGq5lprbGEtpbPC68";
@@ -48,9 +49,9 @@ function FinancialDataWidget() {
 
         fetchStock();
     }, []);
-
+    //CHECKING IF STOCK IS AVAILABLE
     if (!stockData) return <div style={styles.widgetParagraph}>Loading data...</div>;
-
+    //STOCK WIDGET VIEW 
     return (
         <div style={{ ...styles.widgetContainer, ...(stockData ? styles.widgetContainerHover : {}) }}>
             <h2 style={styles.widgetHeader}>Stock Data</h2>

@@ -23,11 +23,12 @@ const styles = {
         lineHeight: '1.6',
     }
 };
-
+//WEATHER WIDGET
 function WeatherWidget() {
     const [weather, setWeather] = useState(null);
 
     useEffect(() => {
+        //FETCH WEATHER FUNCTION
         const fetchWeather = async () => {
             const apiKey = "dd6e2d43d6883cdc5451370a909cd69a";
             const city = "Barrie";

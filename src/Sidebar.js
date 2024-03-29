@@ -1,23 +1,23 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+//SIDE BAR
 const Sidebar = ({ isOpen }) => {
-    const sidebarStyles = {
-        position: 'fixed',
-        top: 0,
-        left: isOpen ? '0' : '-250px',
-        width: '250px',
-        height: '100vh',
-        backgroundColor: '#293241', 
-        transition: 'left 0.3s ease-in-out',
-        zIndex: 1050,
-        padding: '20px 10px',
-    };
+  const sidebarStyles = {
+    position: "fixed",
+    top: 0,
+    left: isOpen ? "0" : "-250px",
+    width: "250px",
+    height: "100vh",
+    backgroundColor: "#293241",
+    transition: "left 0.3s ease-in-out",
+    zIndex: 1050,
+    padding: "20px 10px",
+  };
 
-    return (
-        <>
-            <style>
-                {`
+  return (
+    <>
+      <style>
+        {`
                     .sidebar-link {
                         display: block;
                         padding: 12px 20px;
@@ -52,38 +52,54 @@ const Sidebar = ({ isOpen }) => {
                         margin-bottom: 20px;
                     }
                 `}
-            </style>
-            <div style={sidebarStyles}>
-                <div className="sidebar-header">Navigation</div>
-                <ul className="sidebar-list">
-                    <li>
-                        <NavLink to="/dashboard" className="sidebar-link" activeClassName="active-sidebar-link">
-                            <i className="fas fa-tachometer-alt sidebar-link-icon"></i>
-                            Dashboard
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/weather" className="sidebar-link" activeClassName="active-sidebar-link">
-                            <i className="fas fa-cloud sidebar-link-icon"></i>
-                            Weather
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/news" className="sidebar-link" activeClassName="active-sidebar-link">
-                            <i className="fas fa-newspaper sidebar-link-icon"></i>
-                            News
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/financialDetails" className="sidebar-link" activeClassName="active-sidebar-link">
-                            <i className="fas fa-chart-line sidebar-link-icon"></i>
-                            Stocks
-                        </NavLink>
-                    </li>
-                </ul>
-            </div>
-        </>
-    );
+      </style>
+      <div style={sidebarStyles}>
+        <div className="sidebar-header">Navigation</div>
+        <ul className="sidebar-list">
+          <li>
+            <NavLink
+              to="/dashboard"
+              className="sidebar-link"
+              activeClassName="active-sidebar-link"
+            >
+              <i className="fas fa-tachometer-alt sidebar-link-icon"></i>
+              Dashboard
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/weather"
+              className="sidebar-link"
+              activeClassName="active-sidebar-link"
+            >
+              <i className="fas fa-cloud sidebar-link-icon"></i>
+              Weather
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/news"
+              className="sidebar-link"
+              activeClassName="active-sidebar-link"
+            >
+              <i className="fas fa-newspaper sidebar-link-icon"></i>
+              News
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/financialDetails"
+              className="sidebar-link"
+              activeClassName="active-sidebar-link"
+            >
+              <i className="fas fa-chart-line sidebar-link-icon"></i>
+              Stocks
+            </NavLink>
+          </li>
+        </ul>
+      </div>
+    </>
+  );
 };
 
 export default Sidebar;

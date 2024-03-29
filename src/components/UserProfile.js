@@ -29,6 +29,7 @@ function UserProfile() {
     const [profile, setProfile] = useState(null);
 
     useEffect(() => {
+        //USER PROFILE FETCH
         const fetchUserProfile = async () => {
             const user = auth.currentUser;
             if (user) {

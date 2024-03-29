@@ -9,6 +9,7 @@ function FinancialDetail() {
   const [error, setError] = useState(null); 
 
   useEffect(() => {
+    //DETAILS VIEW
     const fetchData = async () => {
       setIsLoading(true); 
       try {

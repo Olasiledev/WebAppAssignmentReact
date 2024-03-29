@@ -8,7 +8,7 @@ import '../cssStyles/Dashboard.css';
 import UserList from './UserList'; 
 import Calendar from './Calendar';
 import Calculator from './Calculator';
-
+//MAIN DASHBOARD HOSTING WIDGETS
 const Dashboard = () => {
     return (
         <div className="dashboard container-fluid">

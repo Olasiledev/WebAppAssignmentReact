@@ -24,11 +24,12 @@ const styles = {
         paddingBottom: '10px',
     }
 };
-
+//NEWS FEED WIDGET
 function NewsFeedWidget() {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
+        //FETCH NEWS FUNCTION
         const fetchNews = async () => {
             const apiKey = "d244e23c11934874aba112cfe52cda46"; 
             const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;

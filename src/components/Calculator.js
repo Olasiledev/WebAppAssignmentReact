@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "../cssStyles/Calculator.css";
-
+//Calculator
 function Calculator() {
   const [input, setInput] = useState("");
-
+//Changes
   const makeChange = (e) => {
     setInput(input + e.target.value);
   };
-
+//Calulate function
   const calculate = () => {
     try {
       setInput(eval(input).toString());

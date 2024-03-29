@@ -14,8 +14,6 @@ function Register() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-
-
   const handleRegister = async (e) => {
     e.preventDefault();
     setError('');
@@ -23,8 +21,10 @@ function Register() {
       await registerUser(email, password, { firstName, lastName, programName, courseName });
       navigate('/register');
     } catch (error) {
+      const errorMessage = 'Failed to register. ' + error.message;
       console.error("Registration error", error);
       setError('Failed to register. ' + error.message);
+      alert(errorMessage);
     }
   };
 

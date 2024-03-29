@@ -4,18 +4,18 @@ import '../cssStyles/Calender.css';
 
 function Calendar() {
     const [currentDate, setCurrentDate] = useState(new Date());
-  
+  //MONTHS AND DATES
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  
+  //NEXT MONTH CONST
     const nextMonth = () => {
       setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
     };
-  
+  //PREVIOUS MONTH CONST
     const prevMonth = () => {
       setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
     };
-  
+  //DATE GENERATOR
     const generateDays = () => {
       const startDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
       const endDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
@@ -33,7 +33,7 @@ function Calendar() {
   
       return dates;
     };
-  
+  //VIEW 
     return (
       <div className="calendar-container">
         <div className="calendar-header">

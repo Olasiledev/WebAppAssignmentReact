@@ -6,6 +6,7 @@ const WeatherDetail = () => {
   const API_KEY = "dd6e2d43d6883cdc5451370a909cd69a"; 
   const fetchInterval = 10000; 
   useEffect(() => {
+    //FETCH WEATHER
     const fetchData = () => {
       setWeatherData([]);
       

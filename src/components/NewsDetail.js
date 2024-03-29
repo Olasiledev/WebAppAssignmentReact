@@ -4,8 +4,9 @@ function NewsDetail() {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-
+//NEWS DETAIL PAGE
   useEffect(() => {
+    //FETCH news function
     const fetchNews = async () => {
       const API_KEY = "d244e23c11934874aba112cfe52cda46";
       const URL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
