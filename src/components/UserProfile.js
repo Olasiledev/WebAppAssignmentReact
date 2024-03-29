@@ -25,6 +25,14 @@ const styles = {
     }
 };
 
+// Comments for this file
+
+// Below is the Function for the UserProfile that fetchUsers from the Firebase and Displays the user details to the Dashboard
+
+// It fetchs the users details from the collection "users" and displays the collection data to the dashboard using variables
+
+
+
 function UserProfile() {
     const [profile, setProfile] = useState(null);
 
@@ -50,6 +58,8 @@ function UserProfile() {
     if (!profile) {
         return <div style={styles.paragraph}>Loading user profile...</div>;
     }
+
+    // Below are the variables that are displayed 
 
     return (
         <div style={styles.userProfileContainer}>

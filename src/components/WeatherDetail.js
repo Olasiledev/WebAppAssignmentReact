@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 
+// Comments for this file
+
+// Below is the Function for the Weather Details that are being taken from the API request and returned to the Weather Widget...
+
+
 const WeatherDetail = () => {
   const [weatherData, setWeatherData] = useState([]);
   const cities = ["Barrie", "New York", "Tokyo", "Paris", "London"];
@@ -34,6 +39,8 @@ const WeatherDetail = () => {
 
     return () => clearInterval(intervalId); 
   }, []);
+
+// IT fetch the variables from the API like city, temperature, humidity, windSpeed, description etc and displays on dashboard 
 
   return (
     <div className="container mt-5">

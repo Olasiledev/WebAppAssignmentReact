@@ -28,6 +28,16 @@ const styles = {
     },
 };
 
+// Comments for this file....
+
+// Below is the Function for FinancialDataWidget for generating the Widget and its data from API..  
+
+// It fetch the data from the API and displays its results to the dashboard with the required variables such as symbol
+
+// price, change, changepercent, High today, low today, Year High, Year Low
+
+
+
 function FinancialDataWidget() {
     const [stockData, setStockData] = useState(null);
 

@@ -8,7 +8,16 @@ import '../cssStyles/Dashboard.css';
 import UserList from './UserList'; 
 import Calendar from './Calendar';
 import Calculator from './Calculator';
+
 //MAIN DASHBOARD HOSTING WIDGETS
+
+// Comments for this file....
+
+// Below is the Dashboard element for generating the Widgets like UserProfile, WeatherWidget, NewsFeedWidget
+// FinancialDataWidget, Calender, Calculator, UserList Widgets... 
+
+
+
 const Dashboard = () => {
     return (
         <div className="dashboard container-fluid">

@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
 
+
+
+// Comments for this file
+
+// Below is the Function for fetching the the News through an API and setting the Articles to the NewsFeedWidget in the  Dashboard..
+
+
+
 function NewsDetail() {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);

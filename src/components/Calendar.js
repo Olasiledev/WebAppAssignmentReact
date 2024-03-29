@@ -2,6 +2,15 @@ import React, { useState } from 'react';
 import '../cssStyles/Calender.css'; 
 
 
+// Comments for this file..
+
+// Function for Calendar Widget in the Dashboard 
+
+// It generate the Calander Widget in the Dashboard with the features of changing the months with nextMonth() and prevMonth() functions..
+
+// The Calendar Widget displays all the information related to the days, and dates in the required Calendar Format..
+
+
 function Calendar() {
     const [currentDate, setCurrentDate] = useState(new Date());
   //MONTHS AND DATES

@@ -3,6 +3,7 @@ import { loginUser } from './firebase-config';
 import './cssStyles/Login.css';
 import { useNavigate } from 'react-router-dom';
 
+// Login function for providing the login access to the user..
 
 function Login() {
   const [email, setEmail] = useState('');

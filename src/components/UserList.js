@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { db } from '../firebase-config';
 import { collection, getDocs } from "firebase/firestore";
 
+
+
+
+
 const styles = {
     widgetContainer: {
         background: '#f8f8f8',
@@ -26,6 +30,13 @@ const styles = {
         paddingBottom: '10px',
     }
 };
+
+
+// Comments for this file
+
+// Below is the Function for the UserList that fetchUsers from the Firebase and Displays them in the Dashboard
+
+// It fetchs the users data from the collection "users" and put them to the map that further show details in the Dashboard
 
 function UserList() {
     const [users, setUsers] = useState([]);

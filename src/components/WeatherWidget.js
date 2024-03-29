@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
+
+
+
 const styles = {
     widgetContainer: {
         background: '#f8f8f8',
@@ -23,6 +26,11 @@ const styles = {
         lineHeight: '1.6',
     }
 };
+
+// Comments for this file
+
+// Below is the Function for the Weather Widget that displays the information to the Dashboard and takes data from API
+
 //WEATHER WIDGET
 function WeatherWidget() {
     const [weather, setWeather] = useState(null);

@@ -3,6 +3,7 @@ import { registerUser } from './firebase-config';
 import './cssStyles/Register.css';
 import { useNavigate } from 'react-router-dom';
 
+// Register Function for providing register access to the user..
 
 function Register() {
   const [email, setEmail] = useState('');

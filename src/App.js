@@ -10,6 +10,11 @@ import NewsDetail from "./components/NewsDetail";
 import MainComponent from "./components/MainComponent";
 import FinancialDetail from "./components/FinancialDetails";
 
+// Comments for this file
+
+// Below are the Routes for the login, register, dashboard, weather, news and financialDetails
+
+// There is also route for home screen that is redirected to the custom route
 
 function App() {
   return (

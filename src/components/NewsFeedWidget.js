@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
+
+// Comments for this file
+
+// Below is the Function for fetching the NewsFeed through an API and setting the News to the NewsFeedWidget that displays them in the Dashboard...
+
+
 const styles = {
     widgetContainer: {
         background: '#f8f8f8',

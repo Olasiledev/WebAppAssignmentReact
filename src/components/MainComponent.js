@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import Sidebar from "../Sidebar";
 
+
+// Comments for this file
+
+// Below Component checks if the sidebar is Opened or Closed, and set the style properites according to the custom design
+
 const MainComponent = ({ children }) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 

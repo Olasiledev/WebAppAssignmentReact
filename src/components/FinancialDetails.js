@@ -3,6 +3,13 @@ import '../cssStyles/FinancialDetail.css';
 
 const stockSymbols = ["AAPL", "MSFT", "GOOGL", "AMZN", "FB", "TSLA"];
 
+// Comments for this file
+
+// Below is the function for FinancialDetail that displays the values to the Dashboard using the setStockData sub-function
+
+// and set the required details for the FinancialDataWidget to the dashboard..
+
+
 function FinancialDetail() {
   const [stockData, setStockData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);

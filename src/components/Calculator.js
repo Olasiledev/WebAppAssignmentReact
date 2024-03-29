@@ -1,6 +1,20 @@
 import React, { useState } from "react";
 import "../cssStyles/Calculator.css";
 //Calculator
+
+// Comments for this file...
+
+// Function for Calculator Widget in the Dashboard
+
+// It generates the Calculator Widget in the Dashboard with the following operations to be performed...
+
+// And for doing the operations it takes input from the user and do further operations for the Calculator Widget...
+
+// Operations such as Addition, Subtraction, Division, Multiplication are being carried out using this Widget...
+
+// Clearing the input in the Calculator Widget requires one function called "clearInput()" for reseting the Calculator number...
+
+
 function Calculator() {
   const [input, setInput] = useState("");
 //Changes
